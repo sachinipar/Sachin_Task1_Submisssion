@@ -1,0 +1,22 @@
+Kung Fu Scroll Classifier - Report
+
+Objective:
+To classify Kung Fu Scroll symbols as Real or Fake, and identify their category (R1 or R2).
+
+Tools Used:
+- OpenCV (for image processing)
+- HOG features (for symbol shape extraction)
+- SVM classifier (for classification)
+- Python + scikit-learn + joblib
+
+Dataset:
+Four classes: R1_Real, R1_Fake, R2_Real, R2_Fake
+Images preprocessed to 128x128 grayscale.
+
+Model:
+Trained using HOG + SVM with linear kernel.
+Accuracy: (Add your result here)
+Confusion Matrix: (Add if plotted)
+
+Result:
+Model successfully classifies unseen symbols with good accuracy.
