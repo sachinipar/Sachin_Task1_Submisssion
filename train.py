@@ -6,11 +6,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Define dataset path
 dataset_path = "dataset"
 classes = os.listdir(dataset_path)
 
-# Initialize HOG descriptor
 hog = cv2.HOGDescriptor()
 
 data = []
@@ -33,10 +31,8 @@ for label, cls in enumerate(classes):
 data = np.array(data).reshape(len(data), -1)
 labels = np.array(labels)
 
-# Split into train/test
 X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, random_state=42)
 
-# Train SVM classifier
 print("🔹 Training model...")
 model = SVC(kernel='linear', probability=True)
 model.fit(X_train, y_train)
